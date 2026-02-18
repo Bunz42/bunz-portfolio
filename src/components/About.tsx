@@ -55,7 +55,7 @@ export default function About() {
                         <div className="max-w-2xl mx-auto text-center">
                             <p className="text-white/60 text-sm md:text-base tracking-tight leading-relaxed mb-4">
                                 I&apos;m a <span className="text-white font-medium">1st-year university student</span>{" "}
-                                on a mission to become a full-stack software engineer. I love turning
+                                at the <span className="text-white font-medium">University of Waterloo</span>{" "} on a mission to become a full-stack software engineer. I love turning
                                 abstract ideas into real, working products — whether that&apos;s a website
                                 for a local business or a Discord bot with its own economy.
                             </p>

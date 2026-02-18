@@ -72,7 +72,7 @@ export default function Hero() {
                     variants={fadeUp}
                     className="text-sm md:text-base text-white/50 max-w-lg mx-auto mb-10 tracking-tight leading-relaxed"
                 >
-                    1st-year CS student turning ideas into code. Passionate about building
+                    1st-year Computer Engineering student turning ideas into code. Passionate about building
                     sleek interfaces and powerful backends.
                 </motion.p>
 
