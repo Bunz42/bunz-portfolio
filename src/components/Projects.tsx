@@ -5,11 +5,11 @@ import ProjectCard from "./ProjectCard";
 
 const projects = [
     {
-        title: "Mingyuan Renovation Site",
+        title: "Xi Yang Yang Renovation Site",
         description:
             "A website commissioned by a small local renovation company. Built with Next.js, Tailwind, and Framer Motion to show off their work and get them leads.",
         tags: ["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript", "NodeMailer"],
-        href: "https://mingyuan-renovation.vercel.app/",
+        href: "https://xiyangyangrenovation.vercel.app/",
     },
     {
         title: "Say Cheese! Discord Bot",
