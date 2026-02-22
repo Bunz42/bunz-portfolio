@@ -2,14 +2,18 @@
 
 import { motion } from "framer-motion";
 import {
+    Brain,
+    Cloud,
     Code2,
     Coffee,
     Database,
     FileCode,
     Globe,
+    HardDrive,
     Layers,
     Mail,
     Palette,
+    Server,
     Sparkles,
     Terminal,
     Triangle,
@@ -20,37 +24,61 @@ interface TechItem {
     icon: React.ReactNode;
 }
 
-const languages: TechItem[] = [
-    { name: "Java", icon: <Coffee size={22} /> },
-    { name: "Python", icon: <Terminal size={22} /> },
-    { name: "C++", icon: <Code2 size={22} /> },
-    { name: "HTML", icon: <Globe size={22} /> },
-    { name: "CSS", icon: <Palette size={22} /> },
-    { name: "JavaScript", icon: <FileCode size={22} /> },
-];
+interface TechCategory {
+    title: string;
+    items: TechItem[];
+}
 
-const frameworks: TechItem[] = [
-    { name: "React", icon: <Layers size={22} /> },
-    { name: "Next.js", icon: <Globe size={22} /> },
-    { name: "Tailwind CSS", icon: <Palette size={22} /> },
-    { name: "Framer Motion", icon: <Sparkles size={22} /> },
-    { name: "NodeMailer", icon: <Mail size={22} /> },
-    { name: "Vercel", icon: <Triangle size={22} /> },
-    { name: "SQL", icon: <Database size={22} /> },
+const categories: TechCategory[] = [
+    {
+        title: "Frontend",
+        items: [
+            { name: "React", icon: <Layers size={22} /> },
+            { name: "Next.js", icon: <Globe size={22} /> },
+            { name: "Tailwind CSS", icon: <Palette size={22} /> },
+            { name: "Framer Motion", icon: <Sparkles size={22} /> },
+            { name: "HTML", icon: <Globe size={22} /> },
+            { name: "CSS", icon: <Palette size={22} /> },
+            { name: "JavaScript", icon: <FileCode size={22} /> },
+        ],
+    },
+    {
+        title: "Backend",
+        items: [
+            { name: "Java", icon: <Coffee size={22} /> },
+            { name: "Python", icon: <Terminal size={22} /> },
+            { name: "C++", icon: <Code2 size={22} /> },
+            { name: "SQL", icon: <Database size={22} /> },
+            { name: "NodeMailer", icon: <Mail size={22} /> },
+        ],
+    },
+    {
+        title: "Cloud & DevOps",
+        items: [
+            { name: "AWS", icon: <Cloud size={22} /> },
+            { name: "Amazon S3", icon: <HardDrive size={22} /> },
+            { name: "DynamoDB", icon: <Database size={22} /> },
+            { name: "Amazon Comprehend", icon: <Brain size={22} /> },
+            { name: "Vercel", icon: <Triangle size={22} /> },
+        ],
+    },
 ];
 
 function TechCard({
     item,
     index,
-    fromLeft,
+    colIndex,
 }: {
     item: TechItem;
     index: number;
-    fromLeft: boolean;
+    colIndex: number;
 }) {
+    // Alternate slide direction per column
+    const fromX = colIndex % 2 === 0 ? -60 : 60;
+
     return (
         <motion.div
-            initial={{ opacity: 0, x: fromLeft ? -60 : 60 }}
+            initial={{ opacity: 0, x: fromX }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{
@@ -74,7 +102,7 @@ function TechCard({
 export default function TechStack() {
     return (
         <section id="skills" className="relative py-24 md:py-32 px-6">
-            <div className="max-w-5xl mx-auto relative z-10">
+            <div className="max-w-6xl mx-auto relative z-10">
                 {/* Section header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -97,55 +125,32 @@ export default function TechStack() {
                     </p>
                 </motion.div>
 
-                {/* Two-column grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
-                    {/* Languages column */}
-                    <div>
-                        <motion.h3
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.4 }}
-                            className="text-lg md:text-xl font-bold tracking-tight text-white mb-6 flex items-center gap-2"
-                        >
-                            <span className="w-8 h-px bg-gradient-to-r from-accent to-transparent" />
-                            Languages
-                        </motion.h3>
-                        <div className="flex flex-col gap-3">
-                            {languages.map((item, i) => (
-                                <TechCard
-                                    key={item.name}
-                                    item={item}
-                                    index={i}
-                                    fromLeft={true}
-                                />
-                            ))}
+                {/* Three-column grid */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10">
+                    {categories.map((category, colIndex) => (
+                        <div key={category.title}>
+                            <motion.h3
+                                initial={{ opacity: 0, y: -10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: colIndex * 0.1 }}
+                                className="text-lg md:text-xl font-bold tracking-tight text-white mb-6 flex items-center gap-2"
+                            >
+                                <span className="w-8 h-px bg-gradient-to-r from-accent to-transparent" />
+                                {category.title}
+                            </motion.h3>
+                            <div className="flex flex-col gap-3">
+                                {category.items.map((item, i) => (
+                                    <TechCard
+                                        key={item.name}
+                                        item={item}
+                                        index={i}
+                                        colIndex={colIndex}
+                                    />
+                                ))}
+                            </div>
                         </div>
-                    </div>
-
-                    {/* Frameworks & Tools column */}
-                    <div>
-                        <motion.h3
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.4 }}
-                            className="text-lg md:text-xl font-bold tracking-tight text-white mb-6 flex items-center gap-2"
-                        >
-                            <span className="w-8 h-px bg-gradient-to-r from-accent-light to-transparent" />
-                            Frameworks & Tools
-                        </motion.h3>
-                        <div className="flex flex-col gap-3">
-                            {frameworks.map((item, i) => (
-                                <TechCard
-                                    key={item.name}
-                                    item={item}
-                                    index={i}
-                                    fromLeft={false}
-                                />
-                            ))}
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>

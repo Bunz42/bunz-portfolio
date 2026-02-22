@@ -5,6 +5,13 @@ import ProjectCard from "./ProjectCard";
 
 const projects = [
     {
+        title: "Insight-Forge",
+        description:
+            "A serverless, AI-powered dashboard for analyzing customer feedback. Upload CSVs of customer reviews, process them through Amazon Comprehend for sentiment analysis and key phrase extraction, and visualize churn risk in a sleek dark-mode dashboard.",
+        tags: ["Next.js", "React", "Tailwind CSS", "TypeScript", "AWS", "Amazon Comprehend", "Amazon S3", "DynamoDB"],
+        href: "https://github.com/Bunz42/insight-forge",
+    },
+    {
         title: "Xi Yang Yang Renovation Site",
         description:
             "A website commissioned by a small local renovation company. Built with Next.js, Tailwind, and Framer Motion to show off their work and get them leads.",
