@@ -32,6 +32,13 @@ const projects = [
         tags: ["Next.js", "React", "Tailwind CSS", "TypeScript", "JavaScript", "Vite"],
         href: "https://github.com/Bunz42/react-five",
     },
+    {
+        title: "Bunz' Leetcode Solutions",
+        description:
+            "A repository where I post my solutions to Leetcode problems. If you ever need help with a Leetcode problem, feel free to use this as a resource.",
+        tags: ["Leetcode", "Python", "Github"],
+        href: "https://github.com/Bunz42/bunz-leetcode-solutions",
+    },
 ];
 
 export default function Projects() {
