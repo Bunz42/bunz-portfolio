@@ -64,7 +64,7 @@ export default function Hero() {
                     variants={fadeUp}
                     className="text-xl sm:text-2xl md:text-3xl font-medium tracking-tight text-white/80 mb-3"
                 >
-                    Full Stack Developer
+                    Software Engineer
                 </motion.p>
 
                 {/* Description */}
