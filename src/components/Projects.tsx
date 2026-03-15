@@ -35,7 +35,7 @@ const projects = [
     {
         title: "Bunz' Leetcode Solutions",
         description:
-            "A repository where I post my solutions to Leetcode problems. If you ever need help with a Leetcode problem, feel free to use this as a resource.",
+            "A repository where I post my solutions to Leetcode problems.",
         tags: ["Leetcode", "Python", "Github"],
         href: "https://github.com/Bunz42/bunz-leetcode-solutions",
     },
