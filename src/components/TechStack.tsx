@@ -37,7 +37,7 @@ const categories: TechCategory[] = [
             { name: "Next.js", icon: <Globe size={22} /> },
             { name: "Tailwind CSS", icon: <Palette size={22} /> },
             { name: "Framer Motion", icon: <Sparkles size={22} /> },
-            { name: "Typescript, JavaScript", icon: <FileCode size={22} /> },
+            { name: "Typescript", icon: <FileCode size={22} /> },
         ],
     },
     {
