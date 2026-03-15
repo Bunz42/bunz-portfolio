@@ -5,30 +5,30 @@ import ProjectCard from "./ProjectCard";
 
 const projects = [
     {
-        title: "Insight-Forge",
+        title: "Customer Risk Analyzer",
         description:
-            "A serverless, AI-powered dashboard for analyzing customer feedback. Upload CSVs of customer reviews, process them through Amazon Comprehend for sentiment analysis and key phrase extraction, and visualize churn risk in a sleek dark-mode dashboard.",
+            "AI-powered sentiment analysis and and key phrase extraction from CSV files so you can address high churn-risk customers.",
         tags: ["Next.js", "React", "Tailwind CSS", "TypeScript", "AWS", "Amazon Comprehend", "Amazon S3", "DynamoDB"],
         href: "https://github.com/Bunz42/insight-forge",
     },
     {
         title: "Xi Yang Yang Renovation Site",
         description:
-            "A website commissioned by a small local renovation company. Built with Next.js, Tailwind, and Framer Motion to show off their work and get them leads.",
+            "A website commissioned by a small local renovation company to show off their work and get them leads.",
         tags: ["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript", "NodeMailer"],
         href: "https://xiyangyangrenovation.vercel.app/",
     },
     {
         title: "Say Cheese! Discord Bot",
         description:
-            "A Pokécord-style Discord game bot with a full economy system — catch, trade, and battle your way to the top. Powered by SQLite for persistent data.",
+            "A Pokécord-style Discord game bot with a full economy system — catch, trade, and battle your way to the top.",
         tags: ["Python", "Discord.py", "SQLite", "Bot"],
         href: "https://github.com/Bunz42/Say-Cheese-Discord-Bot",
     },
     {
         title: "React-Five",
         description:
-            "A showcase of my 5-project React challenge: TODO app, Crypto Dashboard, E-commerce store, and more. Building skills one project at a time.",
+            "A showcase of me playing around with React and Next.js by building 5 projects scaling up in difficulty.",
         tags: ["Next.js", "React", "Tailwind CSS", "TypeScript", "JavaScript", "Vite"],
         href: "https://github.com/Bunz42/react-five",
     },
@@ -65,9 +65,6 @@ export default function Projects() {
                             Projects
                         </span>
                     </h2>
-                    <p className="text-white/45 text-sm md:text-base tracking-tight max-w-md mx-auto">
-                        Driven by curiosity, built with passion. Here&apos;s what I&apos;ve been working on.
-                    </p>
                 </motion.div>
 
                 {/* Project grid */}

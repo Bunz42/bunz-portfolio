@@ -18,14 +18,15 @@ const socials = [
 ];
 
 const EMAIL = "raymond.hao0322@gmail.com";
+const DISCORD = "sleepybunz";
 
 export default function Contact() {
-    const [copied, setCopied] = useState(false);
+    const [copied, setCopied] = useState<"" | "email" | "discord">("");
 
-    const copyEmail = () => {
-        navigator.clipboard.writeText(EMAIL);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
+    const copyToClipboard = (text: string, type: "email" | "discord") => {
+        navigator.clipboard.writeText(text);
+        setCopied(type);
+        setTimeout(() => setCopied(""), 2000);
     };
 
     return (
@@ -84,14 +85,26 @@ export default function Contact() {
 
                     {/* Copy email button */}
                     <button
-                        onClick={copyEmail}
+                        onClick={() => copyToClipboard(EMAIL, "email")}
                         className="glow-border group flex items-center gap-2 px-5 py-3 rounded-full border border-red-500/15 bg-white/[0.04] text-white/50 hover:text-white hover:border-accent/25 hover:bg-accent/[0.06] transition-all duration-300 cursor-pointer"
                     >
-                        {copied ? <Check size={20} className="text-green-400" /> : <Mail size={20} />}
+                        {copied === "email" ? <Check size={20} className="text-green-400" /> : <Mail size={20} />}
                         <span className="text-sm font-medium tracking-tight hidden sm:inline">
-                            {copied ? "Copied!" : EMAIL}
+                            {copied === "email" ? "Copied!" : EMAIL}
                         </span>
-                        {!copied && <span className="text-sm font-medium tracking-tight sm:hidden">Email</span>}
+                        {copied !== "email" && <span className="text-sm font-medium tracking-tight sm:hidden">Email</span>}
+                    </button>
+
+                    {/* Copy Discord button */}
+                    <button
+                        onClick={() => copyToClipboard(DISCORD, "discord")}
+                        className="glow-border group flex items-center gap-2 px-5 py-3 rounded-full border border-red-500/15 bg-white/[0.04] text-white/50 hover:text-white hover:border-accent/25 hover:bg-accent/[0.06] transition-all duration-300 cursor-pointer"
+                    >
+                        {copied === "discord" ? <Check size={20} className="text-green-400" /> : <img src="/discord.svg" alt="Discord" className="w-5 h-5 invert opacity-50 group-hover:opacity-100 transition-opacity" />}
+                        <span className="text-sm font-medium tracking-tight hidden sm:inline">
+                            {copied === "discord" ? "Copied!" : DISCORD}
+                        </span>
+                        {copied !== "discord" && <span className="text-sm font-medium tracking-tight sm:hidden">Discord</span>}
                     </button>
                 </motion.div>
 
