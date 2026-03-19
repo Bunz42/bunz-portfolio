@@ -28,8 +28,8 @@ const projects = [
     {
         title: "React-Five",
         description:
-            "A showcase of me playing around with React and Next.js by building 5 projects scaling up in difficulty.",
-        tags: ["Next.js", "React", "Tailwind CSS", "TypeScript", "JavaScript", "Vite"],
+            "A showcase of me playing around with React by building 5 projects scaling up in difficulty.",
+        tags: ["React", "Tailwind CSS", "TypeScript", "JavaScript", "Vite"],
         href: "https://github.com/Bunz42/react-five",
     },
     {
