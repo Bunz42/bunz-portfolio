@@ -1,25 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-jetbrains",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Raymond Hao | Full Stack Developer",
+  title: "Raymond Hao | Software Engineer",
   description:
-    "Raymond Hao (Bunz) — 1st-year CS student & aspiring full-stack developer. Explore my projects, tech stack, and journey.",
+    "Raymond Hao (Bunz) — 1st-year CS student & aspiring software engineer. Explore my projects, tech stack, and journey.",
   keywords: [
     "Raymond Hao",
     "Bunz",
-    "Full Stack Developer",
+    "Software Engineer",
     "Portfolio",
     "Next.js",
     "React",
@@ -27,9 +23,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Raymond Hao" }],
   openGraph: {
-    title: "Raymond Hao | Full Stack Developer",
+    title: "Raymond Hao | Software Engineer",
     description:
-      "Raymond Hao (Bunz) — aspiring full-stack developer. Projects, skills, and more.",
+      "Raymond Hao (Bunz) — aspiring software engineer. Projects, skills, and more.",
     type: "website",
   },
 };
@@ -42,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${ibmPlexMono.variable} antialiased`}
       >
         {children}
       </body>

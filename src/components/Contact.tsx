@@ -44,16 +44,12 @@ export default function Contact() {
                     <span className="inline-block px-4 py-1.5 rounded-full border border-white/[0.12] bg-white/[0.04] text-xs font-medium tracking-tight text-white/60 mb-4">
                         Contact
                     </span>
-                    <h2 className="text-4xl md:text-6xl font-black tracking-tight text-white mb-4">
+                    <h2 className="text-4xl md:text-6xl font-black tracking-tight text-white mb-4 pb-4">
                         Let&apos;s{" "}
                         <span className="bg-gradient-to-r from-accent to-accent-violet bg-clip-text text-transparent">
                             Connect
                         </span>
                     </h2>
-                    <p className="text-white/45 text-sm md:text-base tracking-tight max-w-md mx-auto mb-10">
-                        Got a project idea, want to collaborate, or just want to say hi?
-                        I&apos;m always down to chat.
-                    </p>
                 </motion.div>
 
                 {/* Social links */}
@@ -108,19 +104,6 @@ export default function Contact() {
                     </button>
                 </motion.div>
 
-                {/* Footer */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    className="pt-8 border-t border-white/[0.04]"
-                >
-                    <p className="text-xs text-white/25 tracking-tight">
-                        © {new Date().getFullYear()} Raymond Hao. Built with Next.js,
-                        Tailwind CSS & Framer Motion.
-                    </p>
-                </motion.div>
             </div>
         </section>
     );

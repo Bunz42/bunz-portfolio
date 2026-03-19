@@ -29,24 +29,18 @@ export default function Hero() {
                 animate="show"
                 className="relative z-10 text-center max-w-4xl mx-auto"
             >
-                {/* Tagline */}
-                <motion.p
-                    variants={fadeUp}
-                    className="text-sm md:text-base font-mono tracking-tight text-white/60 mb-4"
-                >
-                    Hey, I&apos;m
-                </motion.p>
+
 
                 {/* Name */}
                 <motion.h1
                     variants={fadeUp}
                     className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight leading-[0.9] mb-4"
                 >
-                    <span className="bg-gradient-to-r from-white via-white to-red-200/80 bg-clip-text text-transparent">
+                    <span className="text-white">
                         Raymond
                     </span>
                     <br />
-                    <span className="bg-gradient-to-r from-accent via-accent-light to-white bg-clip-text text-transparent animate-gradient-x">
+                    <span className="text-accent">
                         Hao
                     </span>
                 </motion.h1>

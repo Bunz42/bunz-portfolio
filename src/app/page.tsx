@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import TechStack from "@/components/TechStack";
+
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import IntroAnimation from "@/components/IntroAnimation";
@@ -30,7 +30,7 @@ export default function Home() {
           >
             <Hero />
             <About />
-            <TechStack />
+
             <Projects />
             <Contact />
           </motion.main>

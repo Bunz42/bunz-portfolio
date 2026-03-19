@@ -33,6 +33,13 @@ const projects = [
         href: "https://github.com/Bunz42/react-five",
     },
     {
+        title: "Blog",
+        description:
+            "A personal blog where I can write and publish articles.",
+        tags: ["Python", "FastAPI", "HTML", "CSS"],
+        href: "https://github.com/Bunz42/blog",
+    },
+    {
         title: "Bunz' Leetcode Solutions",
         description:
             "A repository where I post my solutions to Leetcode problems.",

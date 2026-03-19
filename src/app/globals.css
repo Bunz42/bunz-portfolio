@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 /* ── Custom Properties ── */
@@ -35,8 +34,8 @@
   --color-glass-border: var(--glass-border);
   --color-border-subtle: var(--border-subtle);
   --color-border-hover: var(--border-hover);
-  --font-sans: 'Inter', var(--font-geist-sans), system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-sans: var(--font-jetbrains), ui-monospace, monospace;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 }
 
 /* ── Base Styles ── */
@@ -52,7 +51,7 @@ html {
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
-  font-family: var(--font-sans);
+  font-family: var(--font-jetbrains), 'IBM Plex Mono', ui-monospace, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
