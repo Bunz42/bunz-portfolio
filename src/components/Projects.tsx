@@ -19,7 +19,7 @@ const projects = [
         href: "https://xiyangyangrenovation.vercel.app/",
     },
     {
-        title: "Say Cheese! Discord Bot",
+        title: "Discord Bot",
         description:
             "A Pokécord-style Discord game bot with a full economy system — catch, trade, and battle your way to the top.",
         tags: ["Python", "Discord.py", "SQLite", "Bot"],
