@@ -15,7 +15,7 @@ const projects = [
         title: "Xi Yang Yang Renovation Site",
         description:
             "A website commissioned by a small local renovation company to show off their work and get them leads.",
-        tags: ["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript", "NodeMailer"],
+        tags: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "TypeScript", "NodeMailer"],
         href: "https://xiyangyangrenovation.vercel.app/",
     },
     {
