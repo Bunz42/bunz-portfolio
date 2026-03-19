@@ -55,7 +55,7 @@ export default function About() {
                         <div className="max-w-2xl mx-auto text-center">
                             <p className="text-white/60 text-sm md:text-base tracking-tight leading-relaxed mb-4">
                                 I&apos;m a <span className="text-white font-medium">1st-year university student</span>{" "}
-                                at the <span className="text-white font-medium">University of Waterloo</span>{" "} on a mission to become a software engineer. I like programming
+                                at the <span className="text-white font-medium">University of Waterloo</span>{" "} who wants to be a software engineer. I like programming
                                 because it's hard, and I like excelling at difficult tasks. Also, I have a lot of big ideas that I want to make happen, and programming is the best way to do that.
                             </p>
 

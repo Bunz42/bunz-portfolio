@@ -31,8 +31,6 @@ export default function Contact() {
 
     return (
         <section id="contact" className="relative py-24 md:py-32 px-6">
-            {/* Top gradient line */}
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
 
             <div className="max-w-3xl mx-auto relative z-10 text-center">
                 <motion.div
