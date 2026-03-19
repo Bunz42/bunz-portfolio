@@ -67,7 +67,6 @@ export default function Hero() {
                     className="text-sm md:text-base text-white/50 max-w-lg mx-auto mb-10 tracking-tight leading-relaxed"
                 >
                     1st-year Computer Engineering student. <br></br>
-                    I build user interfaces and backends.
                 </motion.p>
 
                 {/* CTA Buttons */}
