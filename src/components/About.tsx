@@ -60,9 +60,7 @@ export default function About() {
                             </p>
 
                             <p className="text-white/60 text-sm md:text-base tracking-tight leading-relaxed mb-8">
-                                When I&apos;m not coding, you&apos;ll probably find me sitting at a piano, playing badminton, or grinding games. I'm always building side projects that are
-                                arguably <span className="text-accent-light font-medium">way too ambitious</span> for
-                                a first-year. That&apos;s kind of the point though.
+                                When I&apos;m not coding, you&apos;ll probably find me sitting at a piano, playing badminton, or grinding games. I like building side projects in my spare time.
                             </p>
 
                             {/* Stats */}
