@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-jetbrains",
@@ -41,6 +42,7 @@ export default function RootLayout({
         className={`${ibmPlexMono.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
