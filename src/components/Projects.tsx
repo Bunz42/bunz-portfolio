@@ -19,18 +19,18 @@ const projects = [
         href: "https://xiyangyangrenovation.vercel.app/",
     },
     {
+        title: "Chatbot",
+        description:
+            "A Google Gemini-powered chatbot that emulates my main from League of Legends: Kayn.",
+        tags: ["FastAPI", "Google Gemini", "HTML", "CSS"],
+        href: "https://github.com/Bunz42/chatbot",
+    },
+    {
         title: "Discord Bot",
         description:
             "A Pokécord-style Discord game bot with a full economy system — catch, trade, and battle your way to the top.",
         tags: ["Python", "Discord.py", "SQLite", "Bot"],
         href: "https://github.com/Bunz42/Say-Cheese-Discord-Bot",
-    },
-    {
-        title: "React-Five",
-        description:
-            "A showcase of me playing around with React by building 5 projects scaling up in difficulty.",
-        tags: ["React", "Tailwind CSS", "TypeScript", "JavaScript", "Vite"],
-        href: "https://github.com/Bunz42/react-five",
     },
     {
         title: "Blog",
